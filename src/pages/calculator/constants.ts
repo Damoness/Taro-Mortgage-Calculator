@@ -32,8 +32,8 @@ export {
 };
 
 export const LIST_TYPE = {
-  0: ["reservedFunds", "busniessLoan", "group"],
-  1: ["busniessLoan"],
+  0: ["reservedFunds", "businessLoan", "group"],
+  1: ["businessLoan"],
   2: ["reservedFunds"]
 };
 
@@ -63,7 +63,7 @@ export const getRenderList = (data: any) => {
                 "自2019年10月起，商贷利率开始改用LPR（贷款市场报价利率）计算。LPR基准利率每月更新一次，实际贷款利率在LPR的基础上进行一定的浮动。"
             },
             unit: "%",
-            renderType: "busniessLoan"
+            renderType: "businessLoan"
           },
           {
             name: "基点",
@@ -78,7 +78,7 @@ export const getRenderList = (data: any) => {
             },
             inputType: "number",
             keyboardType: "number-pad",
-            renderType: "busniessLoan"
+            renderType: "businessLoan"
           },
           {
             name: "商贷利率",
@@ -92,7 +92,7 @@ export const getRenderList = (data: any) => {
             unitStyle: {
               color: "#0B0F12"
             },
-            renderType: "busniessLoan"
+            renderType: "businessLoan"
           }
         ]
       : [
@@ -110,7 +110,7 @@ export const getRenderList = (data: any) => {
                 : "inOne",
             key: "commerceLoanRate",
             unit: "arrowright",
-            renderType: "busniessLoan"
+            renderType: "businessLoan"
           }
         ];
   return [
@@ -192,7 +192,7 @@ export const getRenderList = (data: any) => {
       key: "commerceLoanYear",
       range: data.options["commerceLoanYear"] || [],
       unit: "arrowright",
-      renderType: "busniessLoan"
+      renderType: "businessLoan"
     },
     {
       name: "利率方式",
@@ -201,7 +201,7 @@ export const getRenderList = (data: any) => {
       key: "loanLrp",
       range: data.options["loanLrp"] || [],
       unit: "arrowright",
-      renderType: "busniessLoan"
+      renderType: "businessLoan"
     },
     ...LPR
   ];
